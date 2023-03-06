@@ -7,14 +7,6 @@ const products = [
   { name: "Inpar de zapatos", sellCount: 6 },
 ];
 
-//for (let ventas of products) {
-  //  if(ventas.sellCount<20){
-    //    badProducts.push(products);
-    //}else{
-      //  goodProducts.push(products);
-    //}
-//}
-
 for (let i = 0; i < products.length; i++) {
     if(products[i].sellCount > 20){
         goodProducts.push(products[i]);
