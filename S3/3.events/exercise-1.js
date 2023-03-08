@@ -1,4 +1,11 @@
-let btn$$ = document.querySelector('#btnToClick');
- btn$$.addEventListener('click', function(){
-    console.log('event');
+
+
+let btn$$ = document.createElement('button');
+btn$$.setAttribute('id','btnToClick')
+
+document.body.appendChild(btn$$);
+btn$$.textContent = 'Pinchame';
+
+ btn$$.addEventListener('click', function(event){
+    console.log(event);
  });
