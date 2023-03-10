@@ -6,17 +6,27 @@ const streamers = [
   ];
   
   
-  let input$$ = document.querySelector('input');
+  // let buttom$$ = document.querySelector('button');
   
-  input$$.addEventListener('click', function(){
-    console.log(input$$.value);
+  // butyom$$.addEventListener('click', function(){
+  //   console.log(input$$.value);
   
-    const gamers = streamers.filter((leyenda) => {
-      if(leyenda.name.toLowerCase().includes(input$$.value.toLowerCase())){
-          return leyenda;
-        }
-        return false;
-      }
-    )
-    console.log(gamers);
-  });
+  //   const gamers = streamers.filter((leyenda) => {
+  //     if(leyenda.name.toLowerCase().includes(input$$.value.toLowerCase())){
+  //         return leyenda;
+  //       }
+  //       return false;
+  //     }
+  //   )
+  //   console.log(gamers);
+  // });
+
+const boton$$ = document.querySelector('button');
+const filtro = () => {
+  const input$$ = document.querySelector('input');
+  const filtrado = streamers.filter(gamers => gamers.name.toLowerCase().includes(input$$,value));
+  console.log(filtrado);
+}
+
+boton$$.addEventListener('click',filtro);
+
