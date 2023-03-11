@@ -7,10 +7,10 @@ const videogames = [
     {name: 'Legend of Zelda: Breath of the wild', genders: ['RPG', 'La cosa más puto bonita que he visto nunca'], score: 10},
 ]
 
-const genero = videogames.filter((generos) =>{
-    return generos.genders === 'RPG';
+const genero = videogames.filter((generos) =>{ 
+   return generos.genders.includes('RPG');
 });
-// .reduce()
-// .find();
+
+const media = genero.reduce((total, game) => total + game.score, 0) / genero.length;
 
 console.log(genero);
