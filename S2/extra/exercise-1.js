@@ -13,3 +13,14 @@ const movies = [
   },
 ];
 
+const categorias = [];
+
+for (const peliculas of movies) {
+  for (const categoria of peliculas.categories) {
+    if (!categories.includes(categoria)) {
+      categorias.push(categoria);
+    }
+  }
+}
+
+console.log(categorias);

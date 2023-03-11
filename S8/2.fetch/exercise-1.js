@@ -1,6 +1,3 @@
-const btn$$ = document.querySelector('button')
-const input$$ = document.querySelector('input')
-
 const losDatos = async () => {
 
     try {
@@ -13,4 +10,4 @@ const losDatos = async () => {
     }
 };
 
-btn$$.addEventListener('click',losDatos);
+console.log(losDatos);
