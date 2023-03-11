@@ -20,8 +20,8 @@ const textop = (devuelve) =>{
     const p$$ = document.createElement('p');
     let texto = `El nombre ${devuelve.name} tiene `;
     for (const country of devuelve.country) {
-        const porcentajes = country.probability * 100;
-        text += `un ${porcentajes} porciento de ser de ${country.country_id}`;
+        const porcentajes = (country.probability * 100).toFixed(2);
+        texto += `un ${porcentajes}% de ser de ${country.country_id}. `;
     }
     p$$.textContent = texto;
     div$$.appendChild(p$$);
@@ -30,5 +30,8 @@ const textop = (devuelve) =>{
 
 
 
-btn$$.addEventListener('click',losDatos);
+btn$$.addEventListener('click', () => {
+    div$$.innerHTML = '';
+    losDatos();
+});
 
