@@ -24,6 +24,7 @@ const pintardatos = ((content) => {
     for (const starwars of content) {
         let divStar$$ = document.createElement('div');
         divStar$$.className = 'personaje';
+        // divStar$$.style.display = 'flex';
 
         let img$$ = document.createElement('img');
         img$$.setAttribute('src', starwars.image);
@@ -41,4 +42,4 @@ const pintardatos = ((content) => {
 })
 
 
-get(0);
+get().then(data => pintardatos(data))
